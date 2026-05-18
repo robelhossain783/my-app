@@ -70,7 +70,7 @@ export default function ProductPage() {
 
   // ✅ ADD TO CART (LOCAL STORAGE - BEST PRACTICE)
   const addToCart = () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
     const updatedCart = [...cart, { ...product, qty }];
 
