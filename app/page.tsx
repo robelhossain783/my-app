@@ -62,12 +62,12 @@ return (
     {/* TOPBAR */}
     <div className="topbar">
       <div>Free Delivery Over ৳999</div>
-      <div>Call: 09642922922</div>
+      <div>Call: 01303750286</div>
     </div>
 
     {/* NAVBAR */}
     <header className="navbar">
-      <div className="logo">E MART</div>
+      <div className="logo">Avaa</div>
 
       <div className="search-box">
         <input placeholder="Search products..." />
@@ -289,7 +289,7 @@ return (
       </div>
 
       <div className="footer-bottom">
-        © 2026 E MART. All rights reserved.
+        © 2026 AVAA. All rights reserved.
       </div>
 
     </footer>

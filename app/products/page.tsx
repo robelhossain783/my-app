@@ -46,7 +46,7 @@ export default function ProductsPage(){
       <header className="navbar">
 
         <Link href="/" className="logo">
-          E MART
+          Avaa
         </Link>
 
         <div className="search-box">
@@ -154,7 +154,7 @@ export default function ProductsPage(){
         </div>
 
         <div className="footer-bottom">
-          © 2026 E MART. All rights reserved.
+          © 2026 AVAA. All rights reserved.
         </div>
 
       </footer>
