@@ -44,11 +44,20 @@ const products = [
   },
 ];
 
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice: number;
+  image: string;
+  description: string;
+};
+
 export default function ProductPage() {
   const router = useRouter();
   const [checkoutOpen,setCheckoutOpen] = useState(false);
   const [cart,setCart] = useState(0);
-  const [cartItems,setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState<Product[]>([]);
   const [cartOpen,setCartOpen] = useState(false);
 
   const { id } = useParams();
@@ -131,7 +140,13 @@ export default function ProductPage() {
 
             <button
               className="buy-btn"
-              onClick={() => setCheckoutOpen(true)}
+              onClick={() => {
+  if (!product) return;
+
+  setCartItems((prev) => [...prev, product]);
+  setCart((prev) => prev + 1);
+  setCartOpen(true);
+}}
             >
               Buy Now
             </button>

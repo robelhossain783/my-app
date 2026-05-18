@@ -40,10 +40,19 @@ const products = [
   }
 ];
 
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice: number;
+  image: string;
+  badge: string;
+};
+
 export default function Page() {
 
   const [cart,setCart] = useState(0);
-  const [cartItems,setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState<Product[]>([]);
   const [cartOpen,setCartOpen] = useState(false);
   const [checkoutOpen,setCheckoutOpen] = useState(false);
 
